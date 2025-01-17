@@ -33,7 +33,7 @@ function calc(
   const time8 = Math.round(come_minute * 1);
   const time9 = Math.round(time7 * 60 + time8);
   //　延長回数、ちょうどいい時間
-  if (first === '60-1' || first === '60-2') {
+  if (first === '60') {
     const time5 = document.getElementById('field1').value =
       Math.ceil((time1 + time2 - 60) / 20);
     
@@ -42,14 +42,14 @@ function calc(
     document.getElementById('feild26').value =
       Math.round((time5 * 20 + time9 + 60) % 60);
   }
-  if (first === '90') {
+  if (first === '120') {
     const time5 = document.getElementById('field1').value =
-      Math.ceil((time1 + time2 - 90) / 20);
+      Math.ceil((time1 + time2 - 120) / 20);
     
-    document.getElementById('feild25').value =    Math.floor(((time9 + 90) + time5 * 20 ) / 60);
+    document.getElementById('feild25').value =    Math.floor(((time9 + 120) + time5 * 20 ) / 60);
       
     document.getElementById('feild26').value =
-      Math.round((time5 * 20 + time9 + 90) % 60);
+      Math.round((time5 * 20 + time9 + 120) % 60);
   };
   
 
