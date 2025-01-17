@@ -1,0 +1,129 @@
+body {
+  background-color: skyblue;
+  height: 100vh;
+}
+
+main {
+  width: 85%;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  padding: 30px 0;
+  margin: 0 auto -20px;
+}
+
+
+input {
+  width: 40px;
+  height: 20px;
+  margin: 20px 10px 20px 10px;
+  font-size: 22px;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+#all_p {
+  width: 100px;
+}
+
+.first-price p,
+.second-price {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  color: maroon;
+}
+
+.none {
+  display: none;
+}
+.food {
+  margin-top: 20px;
+}
+
+.food h2 {
+  font-size: 20px;
+  color: black;
+}
+
+.quantity {
+  border-color: red;
+}
+
+.price {
+  width: 80px;
+}
+
+button {
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-color: white;
+  border-radius: 30px;
+  border: 2px solid red;
+  font-size: 30px;
+  color: #f36;
+  margin: 0 auto 30px;
+}
+
+button:active {
+  background-color: #f36;
+  color: white;
+}
+
+.all_p {
+  margin-top: 30px;
+}
+
+.all_p input {
+  height: 40px;
+  color: #f36;
+  font-size: 30px;
+}
+
+.champagne_p {
+  width: 100px;
+}
+
+span {
+  font-size: 16px;
+  color: red;
+  margin-left: 15px;
+}
+
+a {
+  font-size: 18px;
+  color: blue;
+  text-decoration: none;
+}
+
+a:focus {
+  background-color: gray;
+}
+
+.check {
+  color: red;
+  font-size: 16px;
+}
+
+#champagne-style {
+  margin-bottom: 20px;
+}
+
+#outher_p,
+#outher_m {
+  width: 100px;
+}
