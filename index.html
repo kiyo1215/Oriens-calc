@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ふぁみーゆ支払い計算</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/calculation.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv=" X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <main>
+  <h1>時間計算</h1>
 
+  <form name="form">
+    <h2>チャージ<span>※必須</span></h2>
+    <div class="first-price">
+      <p><input type="radio" name="first" value="60-1" checked>通常</p>
+    </div>
+    <div class="beer none">
+      <p><input type="radio" name="first" value="beer">ビール付き</p>
+    </div>
+
+    <div class="extension">
+      <h2>延長<span>※必須</span></h2>
+      <div class="time">
+        <p>来た時間<input type="number" name="come_hour" id="come_hour">時
+        <input type="number" name="come_minute" id="come_minute">分</p>
+      </div>
+      <div class="time">
+        <p>帰る時間<input type="number" name="go_hour" id="go_hour">時
+        <input type="number" name="go_minute" id="go_minute">分</p>
+      </div>
+      <p>延長回数<input type="text" name="extension_q" id="field1">回</p>
+      <p style="display: none;">延長料金<input type="text" name="extension_p" id="field2">円</p>
+      <p>今の延長が終わる時間<input type="text" name="finish_hour" id="feild25">時
+        <input type="text" name="finish_minute" id="feild26">分
+      </p>
+    </div>
+
+    <button type="button" onclick="calc(
+          castDrinkQuantity.value,
+          cheki_quantity.value,
+          come_hour.value,
+          come_minute.value,
+          go_hour.value,
+          go_minute.value,
+          first.value,
+          finish_hour.value,
+          finish_minute.value,
+          outher_p.value,
+      // outher_m.value,
+      // champagneA.value,
+      // champagneB.value,
+      // champagneC.value,
+      // champagneD.value,
+      // champagneE.value,
+      // champagneF.value,
+      // champagneG.value,
+      // champagneH.value,
+      // champagneI.value,
+      // extension_q.value,
+      // extension_p.value
+          );">計算</button>
+
+    <div class="none">
+    <div class="option">
+    <div class="cast-drink">
+      <h2>キャストドリンク</h2>
+      <p><input type="number" name="castDrinkQuantity" class="quantity">杯<input type="text" id="field3" name="field1" class="price">円</p>
+    </div>
+
+    <div class="cheki">
+      <h2>チェキ</h2>
+      <p><input type="number" name="cheki_quantity" class="quantity">枚
+      <input type="text" id="field4" class="price">円</p>
+    </div>
+
+    <div class="champagne">
+      <h2 id="champagne-style">シャンパン</h2>
+
+      <p>ノンアルコール</p>
+      <p>
+        <input type="number" name="champagneA" class="quantity">本
+        <input type="text" id="field5" class="champagne_p">円
+      </p>
+
+      <p>カフェ・ド・パリ</p>
+      <p>
+        <input type="number" name="champagneB" class="quantity">本
+      　<input type="text" id="field6" class="champagne_p">円
+    　</p>
+
+      <p>天使のアスティ</p>
+      <p>
+        <input type="number" name="champagneC" class="quantity">本
+      　<input type="text" id="field7" class="champagne_p">円
+    　</p>
+
+      <p>リステル</p>
+      <p>
+        <input type="number" name="champagneD" class="quantity">本
+      　<input type="text" id="field8" class="champagne_p">円
+    　</p>
+
+      <p>マバム<p>
+      <p><input type="number" name="champagneE" class="quantity">本
+      <input type="text" id="field9" class="champagne_p">円</p>
+
+      <p>モエ・エ・シャンドン・白</p>
+      <p><input type="number" name="champagneF" class="quantity">本
+      <input type="text" id="field10" class="champagne_p">円</p>
+
+      <p>モエ・エ・シャンドン・ロゼ</p>
+      <p><input type="number" name="champagneG" class="quantity">本
+      <input type="text" id="field11" class="champagne_p">円</p>
+
+      <p>モエ・エ・シャンドン・アイス</p>
+      <p><input type="number" name="champagneH" class="quantity">本
+      <input type="text" id="field12" class="champagne_p">円</p>
+
+      <p>エンジェル(ヘイロー)</p>
+      <p><input type="number" name="champagneI" class="quantity">本
+      <input type="text" id="field13" class="champagne_p">円</p>
+
+      </p>
+      </p>
+    </div>
+
+    
+    <div class="outher">
+      <h2>その他(限定メニューや割引等）</h2>
+      <p>＋<input type="number" name="outher_p" id="outher_p">円</p>
+      <p>ー<input type="number" name="outher_m" id="outher_m">円</p>
+    </div>
+
+    </div>
+
+    <button type="button" onclick="calc(
+      castDrinkQuantity.value,
+      cheki_quantity.value,
+      come_hour.value,
+      come_minute.value,
+      go_hour.value,
+      go_minute.value,
+      first.value,
+      finish_hour.value,
+      finish_minute.value,
+      outher_p.value,
+      outher_m.value,
+      champagneA.value,
+      champagneB.value,
+      champagneC.value,
+      champagneD.value,
+      champagneE.value,
+      champagneF.value,
+      champagneG.value,
+      champagneH.value,
+      champagneI.value,
+      extension_q.value,
+      extension_p.value
+      );">計算</button>
+  </form>
+  <p class="all_p">合計金額<input type="text" name="all_p" id="all_p">円</p>
+</div>
+  <a href="https://kiyo1215.github.io/abc/">リセット</a>
+
+  </main>
+　<script src="js/main.js"></script>
+  </body>
+</html>
