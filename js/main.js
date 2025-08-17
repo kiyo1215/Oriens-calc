@@ -51,6 +51,15 @@ function calc(
     document.getElementById('feild26').value =
       Math.round((time5 * 20 + time9 + 120) % 60);
   };
+  if (first === '240') {
+    const time5 = document.getElementById('field1').value =
+      Math.ceil((time1 + time2 - 240) / 20);
+    
+    document.getElementById('feild25').value =    Math.floor(((time9 + 240) + time5 * 20 ) / 60);
+      
+    document.getElementById('feild26').value =
+      Math.round((time5 * 20 + time9 + 240) % 60);
+  };
   
 
 
