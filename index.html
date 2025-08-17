@@ -15,10 +15,13 @@
   <form name="form">
     <h2>チャージ<span>※必須</span></h2>
     <div class="first-price">
-      <p><input type="radio" name="first" value="60" checked>通常</p>
+      <p><input  class="radio-button" type="radio" name="first" value="60" checked>通常</p>
     </div>
     <div class="first-price">
-      <p><input type="radio" name="first" value="120">120分</p>
+      <p><input class="radio-button" type="radio" name="first" value="120">120分</p>
+    </div>
+    <div class="first-price">
+      <p><input class="radio-button" type="radio" name="first" value="240">240分</p>
     </div>
   <!-- </form> -->
     <div class="extension">
@@ -64,6 +67,7 @@
           );">計算</button>
 
     <div class="none">
+    <!-- </div> -->
     <div class="option">
     <div class="cast-drink">
       <h2>キャストドリンク</h2>
@@ -131,7 +135,7 @@
     <div class="outher">
       <h2>その他(限定メニューや割引等）</h2>
       <p>＋<input type="number" name="outher_p" id="outher_p">円</p>
-      <p>ー<input type="number" name="outher_m" id="outher_m">円</p>
+      <p>-<input type="number" name="outher_m" id="outher_m">円</p>
     </div>
 
     </div>
@@ -162,6 +166,7 @@
       );">計算</button>
   </form>
   <p class="all_p">合計金額<input type="text" name="all_p" id="all_p">円</p>
+
 </div>
   <a href="https://kiyo1215.github.io/Oriens-calc/">リセット</a>
 
